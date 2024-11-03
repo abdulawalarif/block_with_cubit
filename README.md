@@ -9,6 +9,8 @@
 * Updates the UI with a new random name when a button is pressed.
 
 
+ <img src="demo/pick_names.gif" width="20%" alt="Demo of this application" />
+
 
 ## Run Locally
 

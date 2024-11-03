@@ -3,10 +3,12 @@ import 'dart:math' as math show Random;
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: HomePage(),
-  ),);
+  runApp(
+    const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+    ),
+  );
 }
 
 const names = [
@@ -57,7 +59,7 @@ class _HomePageState extends State<HomePage> {
           child: StreamBuilder(
             stream: cubit.stream,
             builder: (context, snapshot) {
-              final button = TextButton(
+              final button = ElevatedButton(
                 onPressed: () => cubit.pickRandomName(),
                 child: const Text(
                   'Pick a Random Name',
@@ -74,7 +76,14 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(snapshot.data.toString()),
+                      Text(
+                        snapshot.data.toString(),
+                        style:
+                            const TextStyle(color: Colors.blue, fontSize: 30),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
                       button,
                     ],
                   );
